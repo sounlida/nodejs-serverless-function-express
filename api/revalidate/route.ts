@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath, revalidateTag } from 'next/cache';
 
 export async function GET(request: NextRequest) {
-  const path = request.nextUrl.searchParams.get('path') || '/items/[id]';
+  const path = request.nextUrl.searchParams.get('path') || '/isr/[id]';
   const collection =
     request.nextUrl.searchParams.get('collection') || 'collection';
   revalidatePath(path);
